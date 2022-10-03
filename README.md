@@ -9,7 +9,7 @@ And than filled the missing values of attributes using mean , median and mode.
 Mean and median are used for numerical data.
 Mode is used for Categorical data.
 
-than logistic model is built for Prediction
+than logistic Regression model is built for Prediction
 The accuracy of the model is 76%
 pred_out is the List which contains Y and N values.
 Y -- Eligible person for loan
