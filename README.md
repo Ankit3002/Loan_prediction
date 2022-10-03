@@ -1,6 +1,6 @@
 # Loan_prediction
 
-In this repository I have created a home prediction model using logistic regression .
+In this repository I have created a loan prediction model using logistic regression .
 I have taken the dataset from kaggle which I have 23 independent attributes and 1 dependent attribute.
 The dependent attribute is binary class with y or n ( y-- whether the person is eligible for loan and n-- whether that person is defaulter or not ).
 
