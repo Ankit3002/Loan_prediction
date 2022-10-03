@@ -117,5 +117,51 @@ for i in pred_test_logistic:
   else:
     pred_out.append('N')
 
-pred_out
+## Decision Tree Model
+
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+tree_model = DecisionTreeClassifier(random_state=1)
+
+
+
+tree_model.fit(x_train,y_train)
+
+pred_cv_tree=tree_model.predict(x_cv)
+
+
+
+
+score_tree =accuracy_score(pred_cv_tree,y_cv)*100 
+
+score_tree
+
+## predicting the test data.
+pred_test_tree = tree_model.predict(test)
+pred_des_out = []
+for i in pred_test_tree:
+  if(i == 1):
+    pred_des_out.append('Y')
+  else:
+    pred_des_out.append('N')
+
+## Random forest Model
+from sklearn.ensemble import RandomForestClassifier
+forest_model = RandomForestClassifier(random_state=1,max_depth=10,n_estimators=50)
+
+
+forest_model.fit(x_train,y_train)
+
+
+pred_cv_forest=forest_model.predict(x_cv)
+
+
+
+score_forest = accuracy_score(pred_cv_forest,y_cv)*100
+
+
+score_forest
 
